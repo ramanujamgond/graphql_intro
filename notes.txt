@@ -1,0 +1,63 @@
+Referance Link - https://www.youtube.com/watch?v=WtkKwO1viI8
+
+install apollo server - https://www.apollographql.com/docs/apollo-server/getting-started
+instll apollo client - https://www.apollographql.com/docs/react/get-started
+
+
+Batman Contingency Plan is the "Tower of Babel" 
+
+
+to run the Server
+node index.js
+yarn start -> run the react app
+
+for every server change restart the server
+
+
+Initial Query on Apollo Server 
+
+query GetAllTodos {
+  getTodos {
+    title
+  }
+}
+
+
+query GetAllTodos {
+  getAllUsers {
+    name
+  }
+
+  getTodos {
+    title
+  }
+}
+
+
+query GetAllTodos($getUserId: ID!) {
+  getUser(id: $getUserId) {
+    name
+  }
+}
+
+{
+  "getUserId": 2
+}
+
+
+// nested query - refer the json placeholder
+
+query ExampleQuery {
+  getTodos {
+    title
+    completed
+    user {
+      name
+      email
+      phone
+    }
+  }
+}
+
+
+
